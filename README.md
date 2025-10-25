@@ -1,4 +1,4 @@
-﻿# 🛍️ Fitzone — E-Commerce Website
+﻿#  Fitzone — E-Commerce Website
 
 **Fitzone** is a simple e-commerce website created as a university project.  
 It allows users to browse clothing for **Men**, **Women**, and **Children**, view product details, and add items to a shopping cart.  
@@ -6,7 +6,7 @@ The goal is to provide a clean, basic, and functional online shopping experience
 
 ---
 
-## 👨‍💻 Team Members
+##  Team Members
 
 | Name | Roll No | Role / Contribution |
 |------|----------|----------------------|
@@ -17,7 +17,7 @@ The goal is to provide a clean, basic, and functional online shopping experience
 
 ---
 
-## 🎯 Project Overview
+##  Project Overview
 
 **Fitzone** is a front-end website where users can:
 
@@ -28,7 +28,7 @@ The goal is to provide a clean, basic, and functional online shopping experience
 
 ---
 
-## 🛠️ Technologies Used
+##  Technologies Used
 
 - **HTML**
 - **CSS**
@@ -36,7 +36,7 @@ The goal is to provide a clean, basic, and functional online shopping experience
 
 ---
 
-## 🧩 Features
+##  Features
 
 - Separate pages for **Men**, **Women**, and **Children**
 - Add-to-cart and remove-from-cart functionality
@@ -46,7 +46,7 @@ The goal is to provide a clean, basic, and functional online shopping experience
 
 ---
 
-## 📁 Project Structure (with Team Contributions)
+##  Project Structure (with Team Contributions)
 
 Fitzone/
 ├── index.html 
