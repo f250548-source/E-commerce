@@ -1,4 +1,4 @@
-/* Fitzone E-commerce - Outfitters Pakistan Inspired Design */
+/* Fitzone E-commerce - Italian Cream Style Enhancement */
 
 /* ===== CSS Reset & Base Styles ===== */
 * {
@@ -8,38 +8,41 @@
 }
 
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Segoe UI', Tahoma, Georgia, serif, sans-serif; /* Added Georgia for a warmer feel */
     line-height: 1.6;
-    color: #333;
-    background-color: #f8f8f8;
+    color: #4B3832; /* Deep Espresso/Mocha for main text */
+    background-color: #FAF0E6; /* Creamy Linen background */
 }
 
 /* ===== Header Section ===== */
 header {
-    background-color: #000;
-    color: #fff;
-    padding: 20px 0;
+    background-color: #4B3832; /* Deep Espresso Header */
+    color: #F5F5DC; /* Creamy Ivory text */
+    padding: 25px 0; /* Slightly more padding */
     text-align: center;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); /* Softer, slightly deeper shadow */
     position: sticky;
     top: 0;
     z-index: 1000;
 }
 
 header h1 {
-    font-size: 2.5em;
+    font-family: Georgia, 'Times New Roman', Times, serif; /* Elegant Serif font */
+    font-size: 3em; /* Larger title */
     font-weight: 700;
-    letter-spacing: 3px;
+    letter-spacing: 4px; /* Wider spacing */
     margin-bottom: 5px;
     text-transform: uppercase;
+    /* Gentle animation on load/display */
+    animation: fadeInDown 0.8s ease-out;
 }
 
 header .tagline {
-    font-size: 0.9em;
+    font-size: 1em;
     font-weight: 300;
-    letter-spacing: 1px;
-    color: #ccc;
-    margin-bottom: 15px;
+    letter-spacing: 2px;
+    color: #D2B48C; /* Light Tan/Warm Accent */
+    margin-bottom: 20px;
 }
 
 /* ===== Navigation ===== */
@@ -47,7 +50,7 @@ nav ul {
     list-style: none;
     display: flex;
     justify-content: center;
-    gap: 15px;
+    gap: 20px; /* Slightly more space */
     flex-wrap: wrap;
 }
 
@@ -58,109 +61,193 @@ nav ul li {
 nav ul li.btn a {
     display: inline-block;
     padding: 10px 30px;
-    background-color: #fff;
-    color: #000;
+    background-color: #F5F5DC; /* Creamy Ivory Button */
+    color: #4B3832; /* Espresso Text */
     text-decoration: none;
     font-weight: 600;
-    font-size: 0.95em;
-    letter-spacing: 1px;
-    border-radius: 2px;
-    transition: all 0.3s ease;
+    font-size: 1em;
+    letter-spacing: 1.5px;
+    border-radius: 4px; /* Slightly rounded edges */
+    transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1); /* Enhanced transition */
     text-transform: uppercase;
+    border: 1px solid #D2B48C; /* Subtle border */
 }
 
 nav ul li.btn a:hover {
-    background-color: #333;
-    color: #fff;
-    transform: translateY(-2px);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    background-color: #D2B48C; /* Tan hover background */
+    color: #F5F5DC; /* Creamy text on hover */
+    transform: translateY(-3px) scale(1.03); /* More pronounced lift and slight scale */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
 }
 
 /* ===== Main Content Section ===== */
 main {
     max-width: 1200px;
-    margin: 40px auto;
+    margin: 50px auto; /* More vertical space */
     padding: 0 20px;
 }
 
 #intro {
     text-align: center;
-    margin-bottom: 50px;
+    margin-bottom: 60px;
 }
 
 #intro h3 {
-    font-size: 1.5em;
+    font-size: 1.6em;
+    font-family: Georgia, 'Times New Roman', Times, serif;
     font-weight: 400;
-    color: #222;
+    color: #4B3832;
     line-height: 1.8;
     margin-bottom: 40px;
     padding: 0 20px;
 }
 
-/* ===== Product Images ===== */
-main img {
+/* ===== Product Images & Product Card Styling ===== */
+.product {
+    display: inline-block;
     width: 30%;
     max-width: 350px;
-    height: auto;
     margin: 15px 1.5%;
-    border-radius: 3px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    display: inline-block;
+    text-align: center;
+    background-color: #fff; /* White product card */
+    padding: 20px; /* More padding */
+    border-radius: 8px; /* Softer rounded corners */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08); /* Soft shadow */
+    transition: transform 0.5s ease-out, box-shadow 0.5s ease-out;
     vertical-align: top;
-    background-color: #f0f0f0;
-    min-height: 400px;
+}
+
+.product:hover {
+    transform: translateY(-8px); /* Deeper lift on hover */
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2); /* More dramatic shadow on hover */
+}
+
+/* Product image */
+.product img {
+    width: 100%;
+    height: 380px; /* Slightly taller images */
     object-fit: cover;
+    border-radius: 6px;
+    margin-bottom: 15px; 
+    transition: transform 0.4s ease-out; /* Animation for image hover */
 }
 
-main img:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+.product:hover img {
+    transform: scale(1.02); /* Slight zoom effect on image when card is hovered */
 }
 
-/* Specific styling for intro images */
+/* Product title */
+.product h4 {
+    font-size: 1.3em;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #4B3832;
+    text-transform: capitalize;
+    font-family: Georgia, serif;
+}
+
+/* Product price */
+.product .price {
+    font-size: 1.2em;
+    font-weight: 700;
+    color: #D2B48C; /* Tan/Warm Accent for price */
+}
+
+/* Specific styling for intro images (on index.html) */
 #intro img {
     width: 28%;
     max-width: 320px;
     min-height: 380px;
+    margin: 15px 1.5%;
+    border-radius: 6px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
+    display: inline-block;
+    vertical-align: top;
+    object-fit: cover;
+}
+
+#intro img:hover {
+    transform: scale(1.05) rotate(1deg); /* Subtle rotate and scale effect */
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* Override old main img rules for .product images */
+main .product img {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    min-height: unset !important;
+    box-shadow: none !important;
+    background-color: transparent !important;
 }
 
 /* ===== Footer / Contact Section ===== */
 footer {
-    background-color: #1a1a1a;
-    color: #ccc;
+    background-color: #4B3832; /* Deep Espresso Footer */
+    color: #F5F5DC;
     padding: 40px 20px;
     text-align: center;
     margin-top: 60px;
-    border-top: 3px solid #000;
+    border-top: 5px solid #D2B48C; /* Warm accent border */
 }
 
 footer h3 {
-    font-size: 1.4em;
-    color: #fff;
+    font-size: 1.6em;
+    color: #F5F5DC;
     margin-bottom: 20px;
     text-transform: uppercase;
     letter-spacing: 2px;
+    font-family: Georgia, serif;
 }
 
 footer p {
     margin: 10px 0;
-    font-size: 0.95em;
-    color: #aaa;
+    font-size: 1em;
+    color: #D2B48C;
 }
 
 footer p:last-child {
     margin-top: 25px;
     padding-top: 20px;
-    border-top: 1px solid #333;
-    font-size: 0.85em;
-    color: #777;
+    border-top: 1px solid #6D4C41; /* Slightly lighter line */
+    font-size: 0.9em;
+    color: #9B7653; /* Muted color for copyright */
 }
 
-/* ===== Responsive Design ===== */
+/* ===== Responsive Design (Keep similar structure) ===== */
 @media (max-width: 768px) {
     header h1 {
-        font-size: 2em;
+        font-size: 2.2em;
+    }
+
+    nav ul {
+        gap: 15px;
+    }
+
+    nav ul li.btn a {
+        padding: 8px 18px;
+        font-size: 0.9em;
+    }
+
+    .product,
+    #intro img {
+        width: 45%;
+        margin: 15px 2.5%;
+    }
+    
+    .product img {
+        height: 300px;
+    }
+
+    #intro h3 {
+        font-size: 1.3em;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.8em;
     }
 
     nav ul {
@@ -168,62 +255,22 @@ footer p:last-child {
     }
 
     nav ul li.btn a {
-        padding: 8px 20px;
+        padding: 8px 15px;
         font-size: 0.85em;
     }
 
-    main img,
-    #intro img {
-        width: 45%;
-        min-height: 300px;
-    }
-
-    #intro h3 {
-        font-size: 1.2em;
-    }
-
-    footer {
-        padding: 30px 15px;
-    }
-}
-
-@media (max-width: 480px) {
-    header h1 {
-        font-size: 1.5em;
-        letter-spacing: 2px;
-    }
-
-    header .tagline {
-        font-size: 0.8em;
-    }
-
-    nav ul {
-        gap: 8px;
-    }
-
-    nav ul li.btn a {
-        padding: 8px 15px;
-        font-size: 0.8em;
-    }
-
-    main img,
+    .product,
     #intro img {
         width: 90%;
-        margin: 10px 5%;
-        min-height: 350px;
+        margin: 15px 5%;
+    }
+    
+    .product img {
+        height: 250px;
     }
 
     #intro h3 {
-        font-size: 1em;
-        padding: 0 10px;
-    }
-
-    footer h3 {
-        font-size: 1.2em;
-    }
-
-    footer p {
-        font-size: 0.9em;
+        font-size: 1.1em;
     }
 }
 
@@ -240,86 +287,23 @@ html {
 
 /* Selection styling */
 ::selection {
-    background-color: #000;
-    color: #fff;
+    background-color: #D2B48C;
+    color: #4B3832;
 }
 
 ::-moz-selection {
-    background-color: #000;
-    color: #fff;
-}
-/* ===== Product Card Styling ===== */
-.product {
-    display: inline-block;
-    width: 30%;
-    max-width: 350px;
-    margin: 15px 1.5%;
-    text-align: center;
-    background-color: #fff;
-    padding: 15px;
-    border-radius: 6px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    vertical-align: top;
+    background-color: #D2B48C;
+    color: #4B3832;
 }
 
-.product:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.18);
-}
-
-/* Product image */
-.product img {
-    width: 100%;
-    height: 350px;
-    object-fit: cover;
-    border-radius: 4px;
-    margin-bottom: 10px; /* space between image and title */
-}
-
-/* Product title */
-.product h4 {
-    font-size: 1.2em;
-    font-weight: 600;
-    margin-bottom: 5px;
-    color: #222;
-    text-transform: capitalize;
-}
-
-/* Product price */
-.product .price {
-    font-size: 1.1em;
-    font-weight: 700;
-    color: #111;
-}
-
-/* Responsive adjustments */
-@media (max-width: 768px) {
-    .product {
-        width: 45%;
-        margin: 15px 2.5%;
+/* Keyframe for header animation */
+@keyframes fadeInDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
     }
-    .product img {
-        height: 300px;
+    100% {
+        opacity: 1;
+        transform: translateY(0);
     }
-}
-
-@media (max-width: 480px) {
-    .product {
-        width: 90%;
-        margin: 15px 5%;
-    }
-    .product img {
-        height: 250px;
-    }
-}
-
-/* ===== Override old main img rules for .product images ===== */
-main .product img {
-    width: 100% !important;
-    max-width: 100% !important;
-    margin: 0 !important;
-    min-height: unset !important;
-    box-shadow: none !important;
-    background-color: transparent !important;
 }
