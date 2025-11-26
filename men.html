@@ -1,109 +1,95 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fitzone | Men</title>
-    <link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fitzone | Men</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <!-- Header Section -->
-    <header>
-        <h1>Fitzone</h1>
-        <p class="tagline">Style That Fits Everyone</p>
-        <!--Dropdown-->
-        <nav section="Dropdown">
-            <ul>
-                <li class="btn"><a href="index.html">Home</a></li>
-                <li class="btn"><a href="women.html">Women</a></li>
-                <li class="btn"><a href="child.html">Children</a></li>
-                <!-- Cart Button - Opens checkout modal when clicked -->
-                <li class="btn cart-btn"><a href="#" onclick="openCheckout(); return false;">🛒 Cart <span id="cart-count" class="cart-count">0</span></a></li>
-            </ul>
-        </nav>
-    </header>
+  <header>
+    <h1>Fitzone</h1>
+    <p class="tagline">Style That Fits Everyone</p>
+    <nav>
+      <ul>
+        <li class="btn"><a href="index.html">Home</a></li>
+        <li class="btn"><a href="women.html">Women</a></li>
+        <li class="btn"><a href="child.html">Children</a></li>
+        <li class="btn cart-btn"><a href="#" onclick="openCheckout(); return false;">🛒 Cart <span id="cart-count" class="cart-count">0</span></a></li>
+      </ul>
+    </nav>
+  </header>
 
-    <main>
-        <!-- Product 1 - Men Blazer -->
-        <div class="product">
-            <h4>Men Blazer</h4>
-            <img src="https://outfitters.com.pk/cdn/shop/files/F0321101217.jpg?v=1763357825" alt="Men blazer" />
-            <p class="price">Rs. 5,999</p>
-            <!-- Add to Cart button - passes product name, price (as number), and image URL -->
-            <button class="add-to-cart-btn" onclick="addToCart('Men Blazer', 5999, 'https://outfitters.com.pk/cdn/shop/files/F0321101217.jpg?v=1763357825')">Add to Cart</button>
-        </div>
-
-        <!-- Product 2 - Men Blazer -->
-        <div class="product">
-            <h4>Men Blazer</h4>
-            <img src="https://outfitters.com.pk/cdn/shop/files/F0319101901_8d784ea1-d56a-44cf-82aa-9b8254469643.jpg?v=1763357603" alt="Men blazer" />
-            <p class="price">Rs. 6,499</p>
-            <button class="add-to-cart-btn" onclick="addToCart('Men Blazer Premium', 6499, 'https://outfitters.com.pk/cdn/shop/files/F0319101901_8d784ea1-d56a-44cf-82aa-9b8254469643.jpg?v=1763357603')">Add to Cart</button>
-        </div>
-
-        <!-- Product 3 - Men Pant -->
-        <div class="product">
-            <h4>Men Pant</h4>
-            <img src="https://outfitters.com.pk/cdn/shop/files/F0480108618LOWER_ec9684ac-faa1-430a-b99d-9e109550b214.jpg?v=1742210305" alt="Men pants" />
-            <p class="price">Rs. 3,199</p>
-            <button class="add-to-cart-btn" onclick="addToCart('Men Pant', 3199, 'https://outfitters.com.pk/cdn/shop/files/F0480108618LOWER_ec9684ac-faa1-430a-b99d-9e109550b214.jpg?v=1742210305')">Add to Cart</button>
-        </div>
-
-        <!-- Product 4 - Men Pant -->
-        <div class="product">
-            <h4>Men Pant</h4>
-            <img src="https://outfitters.com.pk/cdn/shop/files/F0537108817LOWER.jpg?v=1745824310" alt="Men pants" />
-            <p class="price">Rs. 3,499</p>
-            <button class="add-to-cart-btn" onclick="addToCart('Men Pant Classic', 3499, 'https://outfitters.com.pk/cdn/shop/files/F0537108817LOWER.jpg?v=1745824310')">Add to Cart</button>
-        </div>
-
-        <!-- Product 5 - Men Shirt -->
-        <div class="product">
-            <h4>Men Shirt</h4>
-            <img src="https://outfitters.com.pk/cdn/shop/files/F0922103622_cf8c3efa-8b92-4287-b84b-0e04df3ce37a.jpg?v=1759123315" alt="Men shirt" />
-            <p class="price">Rs. 2,199</p>
-            <button class="add-to-cart-btn" onclick="addToCart('Men Shirt', 2199, 'https://outfitters.com.pk/cdn/shop/files/F0922103622_cf8c3efa-8b92-4287-b84b-0e04df3ce37a.jpg?v=1759123315')">Add to Cart</button>
-        </div>
-
-        <!-- Product 6 - Men Shirt -->
-        <div class="product">
-            <h4>Men Shirt</h4>
-            <img src="https://outfitters.com.pk/cdn/shop/files/F0945103001-3_1.jpg?v=1760422130" alt="Men shirt" />
-            <p class="price">Rs. 2,399</p>
-            <button class="add-to-cart-btn" onclick="addToCart('Men Shirt Formal', 2399, 'https://outfitters.com.pk/cdn/shop/files/F0945103001-3_1.jpg?v=1760422130')">Add to Cart</button>
-        </div>
-    </main>
-
-    <!-- Contact Section -->
-    <footer id="contact">
-        <h3>Contact Us</h3>
-        <p>Email: contact@fitzone.com</p>
-        <p>Phone: +92 300 1234567</p>
-        <p>Address: Lahore, Pakistan</p>
-        <p>© 2025 Fitzone. All rights reserved.</p>
-    </footer>
-
-    <!-- Checkout Modal - Displays cart contents and checkout options -->
-    <div id="checkout-modal" class="checkout-modal">
-        <div class="checkout-content">
-            <button class="close-btn" onclick="closeCheckout()">×</button>
-            <h2>Your Cart</h2>
-            <!-- Cart items will be rendered here by JavaScript -->
-            <div id="cart-items" class="cart-items"></div>
-            <!-- Total price section -->
-            <div class="cart-summary">
-                <div class="total-row">
-                    <span>Total:</span>
-                    <span id="cart-total" class="total-price">Rs. 0</span>
-                </div>
-                <div class="checkout-buttons">
-                    <button class="clear-cart-btn" onclick="clearCart()">Clear Cart</button>
-                    <button class="checkout-btn" onclick="completeCheckout()">Checkout</button>
-                </div>
-            </div>
-        </div>
+  <main>
+    <div class="product">
+      <h4>Men Blazer</h4>
+      <img src="https://outfitters.com.pk/cdn/shop/files/F0321101217.jpg?v=1763357825" alt="Men blazer">
+      <p class="price">Rs. 5,999</p>
+      <button class="add-to-cart-btn" onclick="addToCart('Men Blazer', 5999, 'https://outfitters.com.pk/cdn/shop/files/F0321101217.jpg?v=1763357825')">Add to Cart</button>
     </div>
 
-    <script src="js/script.js"></script>
+    <div class="product">
+      <h4>Men Blazer</h4>
+      <img src="https://outfitters.com.pk/cdn/shop/files/F0319101901_8d784ea1-d56a-44cf-82aa-9b8254469643.jpg?v=1763357603" alt="Men blazer">
+      <p class="price">Rs. 6,499</p>
+      <button class="add-to-cart-btn" onclick="addToCart('Men Blazer Premium', 6499, 'https://outfitters.com.pk/cdn/shop/files/F0319101901_8d784ea1-d56a-44cf-82aa-9b8254469643.jpg?v=1763357603')">Add to Cart</button>
+    </div>
+
+    <div class="product">
+      <h4>Men Pant</h4>
+      <img src="https://outfitters.com.pk/cdn/shop/files/F0480108618LOWER_ec9684ac-faa1-430a-b99d-9e109550b214.jpg?v=1742210305" alt="Men pants">
+      <p class="price">Rs. 3,199</p>
+      <button class="add-to-cart-btn" onclick="addToCart('Men Pant', 3199, 'https://outfitters.com.pk/cdn/shop/files/F0480108618LOWER_ec9684ac-faa1-430a-b99d-9e109550b214.jpg?v=1742210305')">Add to Cart</button>
+    </div>
+
+    <div class="product">
+      <h4>Men Pant</h4>
+      <img src="https://outfitters.com.pk/cdn/shop/files/F0537108817LOWER.jpg?v=1745824310" alt="Men pants">
+      <p class="price">Rs. 3,499</p>
+      <button class="add-to-cart-btn" onclick="addToCart('Men Pant Classic', 3499, 'https://outfitters.com.pk/cdn/shop/files/F0537108817LOWER.jpg?v=1745824310')">Add to Cart</button>
+    </div>
+
+    <div class="product">
+      <h4>Men Shirt</h4>
+      <img src="https://outfitters.com.pk/cdn/shop/files/F0922103622_cf8c3efa-8b92-4287-b84b-0e04df3ce37a.jpg?v=1759123315" alt="Men shirt">
+      <p class="price">Rs. 2,199</p>
+      <button class="add-to-cart-btn" onclick="addToCart('Men Shirt', 2199, 'https://outfitters.com.pk/cdn/shop/files/F0922103622_cf8c3efa-8b92-4287-b84b-0e04df3ce37a.jpg?v=1759123315')">Add to Cart</button>
+    </div>
+
+    <div class="product">
+      <h4>Men Shirt</h4>
+      <img src="https://outfitters.com.pk/cdn/shop/files/F0945103001-3_1.jpg?v=1760422130" alt="Men shirt">
+      <p class="price">Rs. 2,399</p>
+      <button class="add-to-cart-btn" onclick="addToCart('Men Shirt Formal', 2399, 'https://outfitters.com.pk/cdn/shop/files/F0945103001-3_1.jpg?v=1760422130')">Add to Cart</button>
+    </div>
+  </main>
+
+  <footer id="contact">
+    <h3>Contact Us</h3>
+    <p>Email: contact@fitzone.com</p>
+    <p>Phone: +92 300 1234567</p>
+    <p>Address: Lahore, Pakistan</p>
+    <p>© 2025 Fitzone. All rights reserved.</p>
+  </footer>
+
+  <div id="checkout-modal" class="checkout-modal">
+    <div class="checkout-content">
+      <button class="close-btn" onclick="closeCheckout()">×</button>
+      <h2>Your Cart</h2>
+      <div id="cart-items" class="cart-items"></div>
+      <div class="cart-summary">
+        <div class="total-row">
+          <span>Total:</span>
+          <span id="cart-total" class="total-price">Rs. 0</span>
+        </div>
+        <div class="checkout-buttons">
+          <button class="clear-cart-btn" onclick="clearCart()">Clear Cart</button>
+          <button class="checkout-btn" onclick="completeCheckout()">Checkout</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/script.js"></script>
 </body>
 </html>
