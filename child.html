@@ -18,46 +18,61 @@
                 <li class="btn"><a href="index.html">Home</a></li>
                 <li class="btn"><a href="men.html">Men</a></li>
                 <li class="btn"><a href="women.html">Women</a></li>
+                <!-- Cart Button - Opens checkout modal when clicked -->
+                <li class="btn cart-btn"><a href="#" onclick="openCheckout(); return false;">🛒 Cart <span id="cart-count" class="cart-count">0</span></a></li>
             </ul>
         </nav>
     </header>
 
     <main>
         <section id="children-products">
+            <!-- Product 1 - Children Blazer -->
             <div class="product">
                 <h4>Blazer</h4>
                 <img src="https://static.zara.net/assets/public/d654/8712/e5c74444adb9/df61303db558/06309387406100-p/06309387406100-p.jpg?ts=1756725629034&w=1024" />
                 <p class="price">Rs. 4,499</p>
+                <!-- Add to Cart button - passes product name, price (as number), and image URL -->
+                <button class="add-to-cart-btn" onclick="addToCart('Kids Blazer', 4499, 'https://static.zara.net/assets/public/d654/8712/e5c74444adb9/df61303db558/06309387406100-p/06309387406100-p.jpg?ts=1756725629034&w=1024')">Add to Cart</button>
             </div>
 
+            <!-- Product 2 - Children Blazer -->
             <div class="product">
                 <h4>Blazer</h4>
                 <img src="https://edenrobe.com/cdn/shop/products/22_B_BoysBlazers_EBTB22-4460_R1.jpg?v=1701491327" alt="Children blazer" />
                 <p class="price">Rs. 4,999</p>
+                <button class="add-to-cart-btn" onclick="addToCart('Kids Blazer Premium', 4999, 'https://edenrobe.com/cdn/shop/products/22_B_BoysBlazers_EBTB22-4460_R1.jpg?v=1701491327')">Add to Cart</button>
             </div>
 
+            <!-- Product 3 - Children Pant -->
             <div class="product">
                 <h4>Cool Pant</h4>
                 <img src="https://outfitters.com.pk/cdn/shop/files/F0154609622_2_copy.jpg?v=1733722835" alt="Children pants" />
                 <p class="price">Rs. 1,899</p>
+                <button class="add-to-cart-btn" onclick="addToCart('Kids Cool Pant', 1899, 'https://outfitters.com.pk/cdn/shop/files/F0154609622_2_copy.jpg?v=1733722835')">Add to Cart</button>
             </div>
 
+            <!-- Product 4 - Children Pant -->
             <div class="product">
                 <h4>Cool Pant</h4>
                 <img src="https://outfitters.com.pk/cdn/shop/files/F0220609635_2.jpg?v=1763011565" alt="Children pants" />
                 <p class="price">Rs. 2,099</p>
+                <button class="add-to-cart-btn" onclick="addToCart('Kids Cool Pant Style', 2099, 'https://outfitters.com.pk/cdn/shop/files/F0220609635_2.jpg?v=1763011565')">Add to Cart</button>
             </div>
 
+            <!-- Product 5 - Children Shirt -->
             <div class="product">
                 <h4>Sigma Shirt</h4>
                 <img src="https://outfitters.com.pk/cdn/shop/files/F0281403998_2_copy.jpg?v=1761635582" alt="Children shirt" />
                 <p class="price">Rs. 1,299</p>
+                <button class="add-to-cart-btn" onclick="addToCart('Kids Sigma Shirt', 1299, 'https://outfitters.com.pk/cdn/shop/files/F0281403998_2_copy.jpg?v=1761635582')">Add to Cart</button>
             </div>
 
+            <!-- Product 6 - Children Shirt -->
             <div class="product">
                  <h4>Princess Shirt</h4>
                 <img src="https://outfitters.com.pk/cdn/shop/files/F0282403002_3_copy.jpg?v=1763364700" alt="Children shirt" />
                 <p class="price">Rs. 1,399</p>
+                <button class="add-to-cart-btn" onclick="addToCart('Kids Princess Shirt', 1399, 'https://outfitters.com.pk/cdn/shop/files/F0282403002_3_copy.jpg?v=1763364700')">Add to Cart</button>
             </div>
         </section>
     </main>
@@ -70,6 +85,27 @@
         <p>Address: Lahore, Pakistan</p>
         <p>© 2025 Fitzone. All rights reserved.</p>
     </footer>
+
+    <!-- Checkout Modal - Displays cart contents and checkout options -->
+    <div id="checkout-modal" class="checkout-modal">
+        <div class="checkout-content">
+            <button class="close-btn" onclick="closeCheckout()">×</button>
+            <h2>Your Cart</h2>
+            <!-- Cart items will be rendered here by JavaScript -->
+            <div id="cart-items" class="cart-items"></div>
+            <!-- Total price section -->
+            <div class="cart-summary">
+                <div class="total-row">
+                    <span>Total:</span>
+                    <span id="cart-total" class="total-price">Rs. 0</span>
+                </div>
+                <div class="checkout-buttons">
+                    <button class="clear-cart-btn" onclick="clearCart()">Clear Cart</button>
+                    <button class="checkout-btn" onclick="completeCheckout()">Checkout</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <script src="js/script.js"></script>
 </body>

@@ -18,6 +18,8 @@
                 <li class="btn"><a href="men.html">Men</a></li>
                 <li class="btn"><a href="women.html">Women</a></li>
                 <li class="btn"><a href="child.html">Child</a></li>
+                <!-- Cart Button - Opens checkout modal when clicked -->
+                <li class="btn cart-btn"><a href="#" onclick="openCheckout(); return false;">🛒 Cart <span id="cart-count" class="cart-count">0</span></a></li>
             </ul>
         </nav>
     </header>
@@ -46,6 +48,27 @@
         <p>Address: Lahore, Pakistan</p>
         <p>© 2025 Fitzone. All rights reserved.</p>
     </footer>
+
+    <!-- Checkout Modal - Displays cart contents and checkout options -->
+    <div id="checkout-modal" class="checkout-modal">
+        <div class="checkout-content">
+            <button class="close-btn" onclick="closeCheckout()">×</button>
+            <h2>Your Cart</h2>
+            <!-- Cart items will be rendered here by JavaScript -->
+            <div id="cart-items" class="cart-items"></div>
+            <!-- Total price section -->
+            <div class="cart-summary">
+                <div class="total-row">
+                    <span>Total:</span>
+                    <span id="cart-total" class="total-price">Rs. 0</span>
+                </div>
+                <div class="checkout-buttons">
+                    <button class="clear-cart-btn" onclick="clearCart()">Clear Cart</button>
+                    <button class="checkout-btn" onclick="completeCheckout()">Checkout</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <script src="js/script.js"></script>
 </body>
