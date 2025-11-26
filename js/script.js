@@ -1,17 +1,3 @@
-/**
- * Fitzone E-commerce Cart & Checkout System
- * 
- * This script handles all cart and checkout functionality:
- * - Adding items to cart
- * - Removing items from cart
- * - Updating cart count in header
- * - Calculating total prices
- * - Displaying checkout modal
- */
-
-// ===== CART DATA STORAGE =====
-// We use localStorage to persist cart data across page refreshes
-// Cart is stored as an array of objects with product info
 
 /**
  * Get the current cart from localStorage
@@ -97,7 +83,6 @@ function updateQuantity(index, change) {
     // Update quantity
     cart[index].quantity += change;
     
-    // Remove item if quantity is 0 or less
     if (cart[index].quantity <= 0) {
         cart.splice(index, 1);
     }
@@ -132,7 +117,6 @@ function getCartItemCount() {
     return cart.reduce((count, item) => count + item.quantity, 0);
 }
 
-// ===== UI UPDATE FUNCTIONS =====
 
 /**
  * Update the cart count display in the header
